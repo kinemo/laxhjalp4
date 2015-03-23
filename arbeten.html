@@ -12,12 +12,15 @@
 <head>
   <meta charset="utf-8" />
   <title>Vilka vi är - Läxhjälpen</title>
-  <link rel="stylesheet" href="nivo-slider.css" media="screen" />
+ <link rel="stylesheet" href="scripts/nivo-slider.css" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript">
+</script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
   <!-- Här fattas något -->
 
-  <link href="laxhjalpen.css" title="Finished" rel="stylesheet" />
+  <link href="laxhjalpen.css" title="Finished" rel="stylesheet">
 </head>
 <body class="subpage">
   <header>
@@ -41,14 +44,12 @@
   <div role="main">
   <div class="blockslider theme-default">
 	<div id="slider" class="nivoSlider">
-		<a href="#lstuga"><img src="image/1.png" alt="" title="Läxstuga med dig och dina kompisar" /></a>
-		<a href="#skypeh"><img src="image/2.png" alt="" title="Hjälp via skype" /></a>
-		<a href="#mailhp"><img src="image/3.png" alt="" title="Hjälp via mail"/></a>
-		<a href="#videos"><img src="image/4.png" alt="" title="Vi har också videolektioner"/></a>
-  
-  
+		<a href="#lstuga"><img src="images/1.png" alt="" title="Läxstuga med dig och dina kompisar"></a>
+		<a href="#skypeh"><img src="images/2.png" alt=""  title="Hjälp via skype"></a>
+		<a href="#mailhp"><img src="images/3.png" alt="" title="Hjälp via mail"></a>
+		<a href="#videos"><img src="images/4.png" alt="" title="Vi har också videolektioner"></a>
 	</div>
-  </div
+  </div>
   <table class="borderless services">
   <thead>
 			<tr>
@@ -80,10 +81,33 @@
   <footer>
     <small>&copy; Lars Gunther och Thelin AB</small>
   </footer>
- <script src="http://code.jquery.com/jquery-1.7.2.min.js"/></script> 
- <script src="scripts/jquery.nivo.slider.pack.js"/></script>
-<script> $('#slider').nivoSlider(); </script>
-  
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});
+$('#slider').nivoSlider({
+    effect: 'random',                 // Specify sets like: 'fold,fade,sliceDown'
+    slices: 15,                     // For slice animations
+    boxCols: 8,                     // For box animations
+    boxRows: 4,                     // For box animations
+    animSpeed: 500,                 // Slide transition speed
+    pauseTime: 3000,                 // How long each slide will show
+    startSlide: 0,                     // Set starting Slide (0 index)
+    directionNav: true,             // Next & Prev navigation
+    controlNav: true,                 // 1,2,3... navigation
+    controlNavThumbs: false,         // Use thumbnails for Control Nav
+    pauseOnHover: true,             // Stop animation while hovering
+    manualAdvance: false,             // Force manual transitions
+    prevText: 'föregående',                 // Prev directionNav text
+    nextText: 'nästa',                 // Next directionNav text
+    randomStart: false,             // Start on a random slide
+    beforeChange: function(){},     // Triggers before a slide transition
+    afterChange: function(){},         // Triggers after a slide transition
+    slideshowEnd: function(){},     // Triggers after all slides have been shown
+    lastSlide: function(){},         // Triggers when last slide is shown
+    afterLoad: function(){}         // Triggers when slider has loaded
+});
+</script>
 </body>
 </html>
 

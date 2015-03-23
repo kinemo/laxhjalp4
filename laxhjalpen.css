@@ -18,7 +18,9 @@ section, header, footer {
 .startpage .logo{
     width: 146px;
     height: 123px;
+	
 }
+
 h1 {
     display: inline-block;
     margin: 0;
@@ -94,7 +96,7 @@ padding-bottom: 1em;
 margin-bottom: 2em;
 border-bottom: 3px double #00af64;
 }
-div[role="main"] > article{ width: 100%; float: right;}
+div[role="main"] > article{ width: 100%; }
 div[role="main"]  > article:last-child{
 border-bottom:none;
 margin-bottom: 0;
@@ -136,7 +138,7 @@ border-style: double;
 border-width: 3px;
 border-color: #00af64 transparent;
 margin: 2em 0;}
-.subpage > header h1 > span {color: a62f00 }
+.subpage  h1 > span {color: #a62f00 }
 
 .borderless {
 	*border-collapse: collapse;
@@ -190,3 +192,16 @@ color: black;
 }
 nav a:hover{
 color:brown;}
+
+.blockslider {
+height: 300px;
+margin-bottom: 20px;
+}
+.nivoSlider {
+margin: 0 auto;
+width: 618px;
+height: 246px;
+}
+.nivo-caption {
+text-align: center;
+}
